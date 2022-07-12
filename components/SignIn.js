@@ -26,13 +26,13 @@ const SIGNIN_MUTATION = gql`
 export default function SignIn() {
   const { inputs, handleChange, resetForm } = useForm({
     email: '',
-    password: '',
+    password: ''
   });
 
   const [signin, { data, loading }] = useMutation(SIGNIN_MUTATION, {
     variables: inputs,
     // refetch the currently
-    refetchQueries: [{ query: CURRENT_USER_QUERY }],
+    refetchQueries: [{ query: CURRENT_USER_QUERY }]
   });
 
   const handleSubmit = async (e) => {

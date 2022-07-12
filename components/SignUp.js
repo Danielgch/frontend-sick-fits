@@ -23,13 +23,13 @@ export default function SignUp() {
   const { inputs, handleChange, resetForm } = useForm({
     email: '',
     name: '',
-    password: '',
+    password: ''
   });
 
   const [signup, { data, loading, error }] = useMutation(SIGNUP_MUTATION, {
     variables: inputs,
     // refetch the currently
-    refetchQueries: [{ query: CURRENT_USER_QUERY }],
+    refetchQueries: [{ query: CURRENT_USER_QUERY }]
   });
 
   const handleSubmit = async (e) => {

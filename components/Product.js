@@ -23,8 +23,8 @@ export default function Product({ product }) {
           href={{
             pathname: 'update',
             query: {
-              id: product.id,
-            },
+              id: product.id
+            }
           }}
         >
           Edit

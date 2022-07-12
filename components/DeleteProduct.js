@@ -21,7 +21,7 @@ export default function DeleteProduct({ id, children }) {
     DELETE_PRODUCT_MUTATION,
     {
       variables: { id },
-      update,
+      update
     }
   );
   return (

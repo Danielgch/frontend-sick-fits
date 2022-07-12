@@ -15,13 +15,13 @@ const REQUEST_RESET_MUTATION = gql`
 
 export default function RequestReset() {
   const { inputs, handleChange, resetForm } = useForm({
-    email: '',
+    email: ''
   });
 
   const [signup, { data, loading, error }] = useMutation(
     REQUEST_RESET_MUTATION,
     {
-      variables: inputs,
+      variables: inputs
       // refetch the currently
       // refetchQueries: [{ query: CURRENT_USER_QUERY }],
     }

@@ -12,9 +12,9 @@ export default function SignOut({ children }) {
   const [signout] = useMutation(SIGN_OUT_MUTATION, {
     refetchQueries: [
       {
-        query: CURRENT_USER_QUERY,
-      },
-    ],
+        query: CURRENT_USER_QUERY
+      }
+    ]
   });
   return (
     <button type="button" onClick={signout}>

@@ -37,12 +37,12 @@ const UPDATE_PRODUCT_MUTATION = gql`
 
 export default function UpdateProduct({ id }) {
   const { data, error, loading } = useQuery(SINGLE_PRODUCT_QUERY, {
-    variables: { id },
+    variables: { id }
   });
 
   const [
     updateProduct,
-    { data: updateData, error: updateError, loading: updateLoading },
+    { data: updateData, error: updateError, loading: updateLoading }
   ] = useMutation(UPDATE_PRODUCT_MUTATION);
 
   const { inputs, handleChange, clearForm, resetForm } = useForm(data?.Product);
@@ -59,8 +59,8 @@ export default function UpdateProduct({ id }) {
             id,
             name: inputs.name,
             description: inputs.description,
-            price: inputs.price,
-          },
+            price: inputs.price
+          }
         }).catch(console.error);
         clearForm();
         // // GO TO THAT PRODUCT'S PAGE!

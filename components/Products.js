@@ -31,8 +31,8 @@ export default function Products({ page }) {
   const { data, error, loading } = useQuery(ALL_PRODUCTS_QUERY, {
     variables: {
       skip: page * perPage - perPage,
-      first: perPage,
-    },
+      first: perPage
+    }
   });
   if (loading) return <p>Loading ...</p>;
   if (error) return <p>{error.message}</p>;

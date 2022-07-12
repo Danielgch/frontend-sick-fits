@@ -38,14 +38,14 @@ export default function CreateProduct() {
     image: '',
     name: 'Nice Shoes',
     price: 34234,
-    description: 'These are the best shoes!',
+    description: 'These are the best shoes!'
   });
 
   const [createProduct, { loading, error, data }] = useMutation(
     CREATE_PRODUCT_MUTATION,
     {
       variables: inputs,
-      refetchQueries: [{ query: ALL_PRODUCTS_QUERY }],
+      refetchQueries: [{ query: ALL_PRODUCTS_QUERY }]
     }
   );
 
@@ -58,7 +58,7 @@ export default function CreateProduct() {
         clearForm();
         // GO TO THAT PRODUCT'S PAGE!
         Router.push({
-          pathname: `/product/${res.data.createProduct.id}`,
+          pathname: `/product/${res.data.createProduct.id}`
         });
       }}
     >
